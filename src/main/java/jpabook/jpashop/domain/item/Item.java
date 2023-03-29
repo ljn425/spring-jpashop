@@ -2,6 +2,7 @@ package jpabook.jpashop.domain.item;
 
 import jpabook.jpashop.domain.Category;
 import jpabook.jpashop.exception.NotEnoughStockException;
+import jpabook.jpashop.service.dto.UpdateItemDto;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
@@ -34,6 +35,12 @@ public abstract class Item {
         this.name = name;
         this.price = price;
         this.stockQuantity = stockQuantity;
+    }
+
+    public void changeItem(UpdateItemDto dto) {
+        this.name = dto.getName();
+        this.price = dto.getPrice();
+        this.stockQuantity = dto.getStockQuantity();
     }
 
     //==비즈니스 로직==//

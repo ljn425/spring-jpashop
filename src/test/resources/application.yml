@@ -15,5 +15,6 @@ spring:
 
 logging:
   level:
+    jpabook.jpashop: debug
     org.hibernate.SQL: debug
     org.hibernate.type: trace
