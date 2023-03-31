@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -62,7 +61,6 @@ public class MemberApiController {
 
         return new Result(data.size(), data);
     }
-
 
     @Data
     @AllArgsConstructor
